@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Sweet Question for You</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      // Tailwind CSS Configuration
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'background': '#FEF2F9',
+              'card': '#FFF0F5',
+              'accent': '#E66BB0',
+              'accent-dark': '#D65B9F',
+              'muted': '#6B6B6B',
+              'heart': '#FF4D6D',
+              'text-main': '#3A2A3D',
+            },
+            fontFamily: {
+              'sans': ['Poppins', 'sans-serif'],
+              'display': ['Pacifico', 'cursive'],
+            },
+            boxShadow: {
+              'pink': '0 10px 40px rgba(255, 105, 180, 0.25)',
+              'pink-lg': '0 20px 60px rgba(255, 105, 180, 0.35)',
+            },
+            keyframes: {
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px) scale(0.95)' },
+                '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              },
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            }
+          },
+        },
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* This file is for base styles. Most styling is done via Tailwind CSS in index.html */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hearts-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    transform: rotate(45deg) scale(var(--scale, 1));
+    animation-name: float-up;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    /* Heart shape, based on a rotated square */
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 77, 109, 0.6); /* Use heart color with opacity */
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 77, 109, 0.6);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -10px;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0) rotate(45deg) scale(var(--scale, 1));
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(45deg) scale(var(--scale, 1));
+        opacity: 0;
+    }
+}
+
+/* Define variables for each heart to create a random effect */
+.heart:nth-child(1) { left: 10%; animation-duration: 15s; animation-delay: 0s;  --scale: 0.6; }
+.heart:nth-child(2) { left: 20%; animation-duration: 10s; animation-delay: 2s;  --scale: 0.8; }
+.heart:nth-child(3) { left: 30%; animation-duration: 18s; animation-delay: 4s;  --scale: 0.5; }
+.heart:nth-child(4) { left: 40%; animation-duration: 12s; animation-delay: 1s;  --scale: 0.7; }
+.heart:nth-child(5) { left: 50%; animation-duration: 20s; animation-delay: 5s;  --scale: 0.9; }
+.heart:nth-child(6) { left: 60%; animation-duration: 13s; animation-delay: 3s;  --scale: 0.6; }
+.heart:nth-child(7) { left: 70%; animation-duration: 16s; animation-delay: 6s;  --scale: 1.0; }
+.heart:nth-child(8) { left: 80%; animation-duration: 11s; animation-delay: 0.5s; --scale: 0.75; }
+.heart:nth-child(9) { left: 90%; animation-duration: 19s; animation-delay: 2.5s; --scale: 0.85; }
+.heart:nth-child(10){ left: 5%;  animation-duration: 14s; animation-delay: 7s;  --scale: 0.55; }
+.heart:nth-child(11){ left: 85%; animation-duration: 17s; animation-delay: 8s;  --scale: 0.8; }
+.heart:nth-child(12){ left: 25%; animation-duration: 11s; animation-delay: 5.5s; --scale: 0.65; }

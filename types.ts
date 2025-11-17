@@ -1,0 +1,1 @@
+export type ModalContent = 'ask' | 'yes' | 'maybe' | 'no' | 'success' | null;
